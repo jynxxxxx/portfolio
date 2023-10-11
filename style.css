@@ -188,36 +188,7 @@ a{
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.contactsubtext{  .left .design{
-  margin-left: calc(20% - 10px);
-  margin-top: -10px;
-}
-
-.left .projectimg{ 
-  margin-left: 20%;
-}
-
-.right.projectcard{
-  grid-template-columns: 0.7 0.3fr;
-  grid-template-rows: 0.3fr .7fr;
-}
-
-.right .design{
-  margin-left: calc(-20% + 10px);
-  margin-top: -10px;
-}
-
-.right .projectimg{ 
-  margin-left: -20%;
-}
-
-.seemore{
-  padding: 16px 0;
-}
-
-.contactctn{
-  height: 30vh;
-}
+.contactsubtext{
   font-family: 'Oxygen Mono', monospace;
   font-size:  var(--descripsize);
   margin: 0;
@@ -233,36 +204,7 @@ a{
 
 .icon{
   height: var(--titlesize);
-}  .left .design{
-  margin-left: calc(20% - 10px);
-  margin-top: -10px;
-}
-
-.left .projectimg{ 
-  margin-left: 20%;
-}
-
-.right.projectcard{
-  grid-template-columns: 0.7 0.3fr;
-  grid-template-rows: 0.3fr .7fr;
-}
-
-.right .design{
-  margin-left: calc(-20% + 10px);
-  margin-top: -10px;
-}
-
-.right .projectimg{ 
-  margin-left: -20%;
-}
-
-.seemore{
-  padding: 16px 0;
-}
-
-.contactctn{
-  height: 30vh;
-}
+}  
 
 .portfolioctn{
   margin-top: 120px;
