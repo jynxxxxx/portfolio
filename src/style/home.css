@@ -1,0 +1,251 @@
+/* intro */
+.introctn {
+  border-bottom: 2px black solid;
+  height: 90vh;
+  background-image: url("./wavybackground.png");
+  background-repeat: no-repeat;
+  background-size: 110% 100%;
+}
+
+.nameintro {
+  font-family: 'Righteous', cursive;
+  font-size: 7rem;
+  letter-spacing: 3rem;
+  transform: scaleY(1.5);
+  padding-top: calc(55% - (90vw / 2));
+  padding-left: calc(65% - (100vw / 2));
+}
+
+.introsubtext {
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: var(--title-font);
+  font-size: 5rem;
+  letter-spacing: 2.5rem;
+  padding-top: 5%;
+  padding-left: calc(80% - (100vw / 2));
+}
+
+.homeIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+}
+
+.homeHi {
+  font-size: 5rem;
+}
+
+.introblurb {
+  font-size: var(--cardlabelsize);
+}
+
+.langs {
+  padding-top: var(--cardlabelsize);
+  font-size: var(--cardlabelsize);
+}
+
+/* icon carousel */
+
+.iconctn {
+  box-sizing: border-box;
+  height: 10rem;
+  margin: auto;
+  overflow: hidden;
+  width: 80%;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  background-color: rgb(226, 236, 236);
+}
+
+.iconctn:before,
+.iconctn:after {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.iconctn:before {
+  left: 0;
+  background: linear-gradient(to left, rgb(226, 236, 236, 0), var(--background-color));
+}
+
+.iconctn:after {
+  right: 0;
+  background: linear-gradient(to right, rgb(226, 236, 236, 0), var(--background-color));
+}
+
+.icontrack {
+  display: flex;
+  animation: 35s slide infinite linear;
+}
+
+.icon {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 5rem;
+}
+
+.icon img {
+  margin: auto;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
+
+.skillctn {
+  margin-top: 3rem;
+  padding: 32px 64px 0;
+  width: 80%;
+}
+
+.skill {
+  padding: 32px 0;
+  border-bottom: grey solid 1px;
+}
+
+.skilltitle {
+  font-family: var(--title-font);
+  font-size: var(--titlesize);
+  letter-spacing: var(--titlespacing);
+}
+
+.skilldescrip {
+  font-family: var(--main-font);
+  font-size: var(--descripsize);
+  padding: 16px 32px 0;
+}
+
+.sneakpeek {
+  padding: 32px 0;
+  border-top: 2px black solid;
+}
+
+.projectstitle {
+  font-family: var(--title-font);
+  font-size: var(--titlesize);
+  letter-spacing: var(--titlespacing);
+  padding-left: 10%;
+  padding-bottom: 32px;
+}
+
+.seemore,
+.learnmore {
+  font-family: var(--main-font);
+  font-size: var(--cardlabelsize);
+  letter-spacing: var(--titlespacing);
+  text-align: center;
+  padding: 32px 0;
+}
+
+.seemore:hover,
+.learnmore:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+  width: fit-content;
+  margin: auto;
+}
+
+
+@media (max-width: 1024px) {
+  .introctn {
+    height: min-content;
+    padding-top: 40px
+  }
+
+  .nameintro {
+    font-size: 2.5rem;
+    letter-spacing: 1.5rem;
+    transform: scaleY(1.5);
+    padding-top: 10%;
+    padding-left: calc(65% - (100vw / 2));
+  }
+
+  .introsubtext {
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+    padding-top: 5%;
+    padding-bottom: 25%;
+    padding-left: calc(85% - (100vw / 2));
+  }
+
+  .skillctn {
+    padding: 16px 16px 32px;
+  }
+
+  .homeHi {
+    font-size: 2rem;
+  }
+
+  .iconctn {
+    height: 7rem;
+  }
+
+  .icon {
+    margin: 0 3rem;
+  }
+
+  .icon img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .seemore,
+  .learnmore {
+    padding: 16px 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .introctn {
+    padding-top: 30px
+  }
+
+  .nameintro {
+    font-size: 1rem;
+    letter-spacing: 1rem;
+    padding-top: 15%;
+  }
+
+  .introsubtext {
+    font-size: 0.7rem;
+    letter-spacing: 1rem;
+    padding-top: 10%;
+    padding-bottom: 30%;
+    padding-left: calc(85% - (100vw / 2));
+  }
+
+  .homeHi {
+    font-size: 2rem;
+  }
+
+  .iconctn {
+    height: 5rem;
+  }
+
+  .icon {
+    margin: 0 1rem;
+  }
+
+  .icon img {
+    width: 60px;
+    height: 60px;
+  }
+}

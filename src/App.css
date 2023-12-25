@@ -1,0 +1,207 @@
+:root {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  --titlesize: 3rem;
+  --descripsize: 1.5rem;
+  --titlespacing: .7rem;
+  --cardlabelsize: 2rem;
+  --projectdescripsize: 1.3rem;
+  --background-color: #d6e4e4;
+  --title-font: 'Bebas Neue', sans-serif;
+  --main-font: 'Jost', sans-serif;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.masterctn {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--titlesize);
+}
+
+.sectionTitle {
+  font-family: var(--title-font);
+  padding-top: 1em;
+}
+
+.separate {
+  margin-top: -1.5rem;
+}
+
+
+/* header */
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 2px black solid;
+  height: 100px;
+  font-size: 40px;
+  font-family: var(--title-font);
+  background-color: var(--background-color);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  padding-left: 3%;
+}
+
+
+.navbarbtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 3%;
+}
+
+.navlink {
+  font-size: 30px;
+  padding: 6px 10px;
+  border-radius: 12px;
+}
+
+.navlink:hover {
+  background-color: lightgrey;
+}
+
+
+@media (max-width: 1024px) {
+  :root {
+    --titlesize: 1.3rem;
+    --descripsize: 0.8rem;
+    --titlespacing: .3rem;
+    --cardlabelsize: 1rem;
+    --projectdescripsize: 0.7rem;
+  }
+
+  .content {
+    margin-top: 70px;
+  }
+
+  .header {
+    height: 70px;
+    font-size: 60px;
+  }
+
+  .navbarbtns {
+    gap: 0.5rem;
+    padding-right: 3%;
+  }
+
+  .navlink {
+    font-size: 25px;
+    padding: 4px 6px;
+    border-radius: 12px;
+  }
+
+  .introctn {
+    height: min-content;
+    padding-top: 40px
+  }
+
+  .nameintro {
+    font-size: 2.5rem;
+    letter-spacing: 1.5rem;
+    transform: scaleY(1.5);
+    padding-top: 10%;
+    padding-left: calc(65% - (100vw / 2));
+  }
+
+  .introsubtext {
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+    padding-top: 5%;
+    padding-bottom: 25%;
+    padding-left: calc(85% - (100vw / 2));
+  }
+
+  .skillctn {
+    padding: 16px 16px 32px;
+  }
+
+  .seemore,
+  .learnmore {
+    padding: 16px 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  :root {
+    --titlesize: 1rem;
+    --descripsize: 0.7rem;
+    --titlespacing: .2rem;
+    --cardlabelsize: 0.7rem;
+    --projectdescripsize: 0.5rem;
+  }
+
+  .content {
+    margin-top: 40px;
+  }
+
+  .header {
+    height: 40px;
+    font-size: 30px;
+  }
+
+  .navbarbtns {
+    gap: 0.5rem;
+    padding-right: 3%;
+  }
+
+  .navlink {
+    font-size: 15px;
+    padding: 2px 4px;
+    border-radius: 12px;
+  }
+
+  .separate {
+    margin-top: 0;
+  }
+
+  .introctn {
+    padding-top: 30px;
+  }
+
+  .nameintro {
+    font-size: 1rem;
+    letter-spacing: 1rem;
+    padding-top: 15%;
+  }
+
+  .introsubtext {
+    font-size: 0.7rem;
+    letter-spacing: 1rem;
+    padding-top: 10%;
+    padding-bottom: 30%;
+    padding-left: calc(85% - (100vw / 2));
+  }
+}

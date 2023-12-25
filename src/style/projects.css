@@ -1,0 +1,301 @@
+.projectctn {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+  align-items: center;
+  padding: 32px 64px;
+  margin-top: 3rem;
+}
+
+.right.projectcard {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr;
+  width: 70rem;
+  height: fit-content;
+}
+
+.left.projectcard {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  width: 70rem;
+  height: fit-content
+}
+
+.right .cardlabel {
+  grid-column: 1/2;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 24px;
+  font-family: var(--title-font);
+  font-size: var(--cardlabelsize);
+  letter-spacing: var(--titlespacing);
+  background-color: #afa09c;
+  align-self: center;
+  margin-left: calc((100% / 3) * 0.20);
+  z-index: 2;
+}
+
+.left .cardlabel {
+  grid-column: 2/3;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 24px;
+  font-family: var(--title-font);
+  font-size: var(--cardlabelsize);
+  letter-spacing: var(--titlespacing);
+  background-color: #afa09c;
+  align-self: center;
+  margin-left: calc((100% / 3) * 0.20);
+  z-index: 2;
+}
+
+.projectdescrip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative
+}
+
+.right .projectdescrip {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 90%;
+  height: 10rem;
+  padding: 5% 32px;
+  background-color: white;
+  font-family: var(--main-font);
+  font-size: var(--projectdescripsize);
+  align-self: start;
+  margin-right: -16px;
+  margin-top: calc((-100% / 3) * 0.20);
+  margin-bottom: calc((100% / 3) * 0.20);
+  z-index: 1;
+}
+
+.left .projectdescrip {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  width: 90%;
+  height: 10rem;
+  padding: 5% 32px;
+  background-color: white;
+  font-family: var(--main-font);
+  font-size: var(--projectdescripsize);
+  align-self: start;
+  margin-left: -16px;
+  margin-top: calc((-100% / 3) * 0.20);
+  margin-bottom: calc((100% / 3) * 0.20);
+  z-index: 1;
+}
+
+.tools {
+  display: flex;
+  gap: 1rem;
+}
+
+.toolsctn {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tool {
+  background-color: lightgray;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: calc(var(--projectdescripsize) * 0.9);
+}
+
+.link {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.projectlinks {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.right .screenshot {
+  grid-row: 1/3;
+  position: relative;
+  justify-self: flex-end;
+  align-self: center;
+  width: 25rem;
+}
+
+.left .screenshot {
+  grid-row: 1/3;
+  position: relative;
+  justify-self: flex-end;
+  align-self: center;
+  width: 25rem;
+}
+
+.right .design {
+  position: absolute;
+  border-top: white 4px solid;
+  border-right: white 4px solid;
+  margin-left: calc(-20% + 16px);
+  margin-top: -16px;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.left .design {
+  position: absolute;
+  border-top: white 4px solid;
+  border-left: white 4px solid;
+  margin-left: calc(20% - 16px);
+  margin-top: -16px;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.right .projectimg {
+  width: 100%;
+  margin-left: -20%;
+}
+
+.left .projectimg {
+  width: 100%;
+  margin-left: 20%;
+}
+
+@media (max-width: 1024px) {
+  .projectctn {
+    gap: 5rem;
+    padding: 20px 48px;
+    margin-top: 1rem;
+  }
+
+  .left.projectcard {
+    grid-template-columns: 0.4fr .6fr;
+    grid-template-rows: 0.6fr .6fr;
+  }
+
+  .left.projectcard,
+  .right.projectcard {
+    width: 30rem;
+  }
+
+  .left .cardlabel,
+  .right .cardlabel {
+    padding: 8px 24px;
+  }
+
+  .left .projectdescrip,
+  .right .projectdescrip {
+    padding: 8% 24px;
+    height: 6rem;
+    width: 17rem;
+  }
+
+  .left .design {
+    margin-left: calc(20% - 10px);
+    margin-top: -10px;
+  }
+
+  .left .projectimg {
+    margin-left: 20%;
+  }
+
+  .right.projectcard {
+    grid-template-columns: 0.6fr 0.4fr;
+    grid-template-rows: 0.6fr 0.6fr;
+  }
+
+  .right .design {
+    margin-left: calc(-20% + 10px);
+    margin-top: -10px;
+  }
+
+  .right .projectimg {
+    margin-left: -20%;
+  }
+
+  .right .screenshot,
+  .left .screenshot {
+    width: 12rem;
+  }
+
+  .toolsctn {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .tool {
+    background-color: lightgray;
+    padding: 2px 4px;
+  }
+
+  .projectlinks {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+    gap: 1.5rem;
+  }
+
+  .link {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectctn {
+    gap: 3rem;
+    padding: 20px 28px;
+    margin-top: 1rem;
+  }
+
+  .left.projectcard,
+  .right.projectcard {
+    width: 20rem;
+  }
+
+  .left .cardlabel,
+  .right .cardlabel {
+    padding: 8px 16px;
+  }
+
+  .left .projectdescrip,
+  .right .projectdescrip {
+    padding: 8% 8px;
+    height: 4rem;
+    width: 12rem;
+  }
+
+  .right .screenshot,
+  .left .screenshot {
+    width: 8rem;
+  }
+
+  .toolsctn {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .tool {
+    background-color: lightgray;
+    padding: 2px 4px;
+  }
+
+  .projectlinks {
+    position: absolute;
+    bottom: 0rem;
+    right: 1rem;
+    gap: 1rem;
+  }
+
+  .link {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+}
