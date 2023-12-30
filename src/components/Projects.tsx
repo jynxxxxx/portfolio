@@ -3,6 +3,7 @@ import memory from "../assets/images/memory.png"
 import battleship from "../assets/images/battleship.png"
 import knight from "../assets/images/knight.png"
 import findme from "../assets/images/findme.png"
+import membersonly from "../assets/images/membersonly.png"
 import { VscGithubInverted, VscLinkExternal } from "react-icons/vsc"
 
 type ProjectDetails = {
@@ -24,11 +25,19 @@ const projects: ProjectDetails[] = [
     tools: ["Typescript", "Next.js", "React", "TRPC"],
   },
   {
-    title: "MemoryCard",
-    descrip: "A Pokemon based memory game",
-    image: memory,
-    gitLink: "https://github.com/jynxxxxx/memorycard",
-    liveLink: "https://jynxxxxx.github.io/memorycard/",
+    title: "MembersOnly",
+    descrip: "A message board that reveals details to members only",
+    image: membersonly,
+    gitLink: "https://github.com/jynxxxxx/membersOnly",
+    liveLink: "https://membersonly-3l2u.onrender.com/",
+    tools: ["Express", "EJS", "Mongoose", "Passport"],
+  },
+  {
+    title: "FindMe",
+    descrip: "A recreation of the classic 'Where's Waldo' game",
+    image: findme,
+    gitLink: "https://github.com/jynxxxxx/findme",
+    liveLink: "https://jynxxxxx.github.io/findme/",
     tools: ["Javascript", "React", "Vite"],
   },
   {
@@ -40,6 +49,14 @@ const projects: ProjectDetails[] = [
     tools: ["Javascript", "Webpack", "Babel"],
   },
   {
+    title: "MemoryCard",
+    descrip: "A Pokemon based memory game",
+    image: memory,
+    gitLink: "https://github.com/jynxxxxx/memorycard",
+    liveLink: "https://jynxxxxx.github.io/memorycard/",
+    tools: ["Javascript", "React", "Vite"],
+  },
+  {
     title: "Knight Travails",
     descrip: "A small app that calculates the minimum number of moves to get from point A to point B",
     image: knight,
@@ -47,14 +64,7 @@ const projects: ProjectDetails[] = [
     liveLink: "https://jynxxxxx.github.io/knight_travails/",
     tools: ["Javascript", "Webpack"],
   },
-  {
-    title: "FindMe",
-    descrip: "A recreation of the classic 'Where's Waldo' game",
-    image: findme,
-    gitLink: "https://github.com/jynxxxxx/findme",
-    liveLink: "https://jynxxxxx.github.io/findme/",
-    tools: ["Javascript", "React", "Vite"],
-  },
+
 ];
 
 export function ProjectDetailsList({ projectLimit = projects.length }) {
