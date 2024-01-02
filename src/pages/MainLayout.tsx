@@ -20,8 +20,6 @@ export default function MainLayout() {
     setHeaderStyle({
       backgroundImage: getBackgroundColor(activeLink),
     });
-
-    console.log(headerStyle)
   }, [activeLink]);
 
   const getBackgroundColor = (link: string) => {
@@ -38,6 +36,56 @@ export default function MainLayout() {
         return 'default color';
     }
   };
+
+  const getActiveLinkFromScroll = () => {
+    // You may need to adjust this logic based on your specific layout and content structure
+    const getElementOffsetTop = (elementId: string): number => {
+      const element = document.getElementById(elementId);
+      return element ? element.offsetTop : 0;
+    };
+
+    const sectionOffsets = {
+      home: 0,
+      about: getElementOffsetTop('about') - 100,
+      projects: getElementOffsetTop('projects') - 100,
+      contact: getElementOffsetTop('contact') - 100,
+    };
+
+    const scrollPosition = window.scrollY;
+
+    let activeLink = 'home';
+
+    // Find the closest section based on scroll position
+    for (const [link, offset] of Object.entries(sectionOffsets)) {
+      if (scrollPosition >= offset) {
+        activeLink = link;
+      } else {
+        break;
+      }
+    }
+
+    return activeLink;
+  };
+
+  const handleScroll = () => {
+    const scrollActiveLink = getActiveLinkFromScroll();
+    setActiveLink(scrollActiveLink);
+  };
+
+  useEffect(() => {
+    setHeaderStyle({
+      backgroundImage: getBackgroundColor(activeLink),
+    });
+  }, [activeLink]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   return (
     <div className="masterctn">
