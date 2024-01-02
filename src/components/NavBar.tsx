@@ -1,46 +1,33 @@
-import { Link } from "react-router-dom"
+import '../App.css';
 
+interface NavBarProps {
+  activeLink: string;
+  handleNavLinkClick: (link: string) => void;
+}
 
-export function NavBar() {
-
+export default function NavBar({ activeLink, handleNavLinkClick }: NavBarProps) {
   return (
-    <>
-      <div className="navlink ">
-        <Link
-          to="/"
-          onClick={() => {
-            window.scroll(0, 0);
-          }}>
+    <ul className="navbarbtns">
+      <li className={`navlink ${activeLink === 'home' ? 'active' : ''}`}>
+        <a href="#home" className="navtext" onClick={() => handleNavLinkClick('home')}>
           Home
-        </Link>
-      </div>
-      <div className="navlink ">
-        <Link
-          to="/aboutme"
-          onClick={() => {
-            window.scroll(0, 0);
-          }}>
+        </a>
+      </li>
+      <li className={`navlink ${activeLink === 'about' ? 'active' : ''}`}>
+        <a href="#about" className="navtext" onClick={() => handleNavLinkClick('about')}>
           About Me
-        </Link>
-      </div>
-      <div className="navlink ">
-        <Link
-          to="/projects"
-          onClick={() => {
-            window.scroll(0, 0);
-          }}>
+        </a>
+      </li>
+      <li className={`navlink ${activeLink === 'projects' ? 'active' : ''}`}>
+        <a href="#projects" className="navtext" onClick={() => handleNavLinkClick('projects')}>
           Projects
-        </Link>
-      </div>
-      <div className="navlink ">
-        <Link
-          to="/contact"
-          onClick={() => {
-            window.scroll(0, 0);
-          }}>
+        </a>
+      </li>
+      <li className={`navlink ${activeLink === 'contact' ? 'active' : ''}`}>
+        <a href="#contact" className="navtext" onClick={() => handleNavLinkClick('contact')}>
           Contact
-        </Link>
-      </div>
-    </>
-  )
+        </a>
+      </li>
+    </ul>
+  );
 }

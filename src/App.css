@@ -1,96 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  background-color: var(--background-color);
   margin: 0;
   padding: 0;
+  --headerwidth: 300px;
   --titlesize: 3rem;
   --descripsize: 1.5rem;
   --titlespacing: .7rem;
-  --cardlabelsize: 2rem;
-  --projectdescripsize: 1.3rem;
-  --background-color: #d6e4e4;
+  --mainsize: 2rem;
+  --background-color: rgb(235, 245, 250);
+  --darkcolor: #103647;
+  --switchcolor: #685445;
+  --medswitchcolor: #B89A81;
+  --lightswitchcolor: #e2cbba;
+  --lightcolor: rgb(210, 219, 223);
+  --grey: #98AFBA;
   --title-font: 'Bebas Neue', sans-serif;
   --main-font: 'Jost', sans-serif;
+  color: white;
 }
 
 .content {
-  margin-top: 100px;
-}
-
-.masterctn {
-  width: 100vw;
-  max-width: 100%;
+  opacity: 1;
   position: relative;
+  display: flex;
 }
 
-ul {
+section {
+  width: 100vw;
+}
+
+.sectionctn {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+ul,
+li {
   list-style-type: none;
   list-style-position: inside;
   padding-left: 0;
 }
 
-a {
+a:-webkit-any-link {
   text-decoration: none;
+  color: inherit;
 }
-
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--titlesize);
-}
-
-.sectionTitle {
-  font-family: var(--title-font);
-  padding-top: 1em;
-}
-
-.separate {
-  margin-top: -1.5rem;
-}
-
 
 /* header */
 .header {
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
-  border-bottom: 2px black solid;
+  right: 0;
   height: 100px;
   font-size: 40px;
   font-family: var(--title-font);
-  background-color: var(--background-color);
   z-index: 10;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-
-.logo {
-  height: 100%;
-  padding-left: 3%;
-}
-
 
 .navbarbtns {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  gap: 2rem;
-  padding-right: 3%;
+  gap: 7rem;
+  padding-left: 3rem;
+  width: 100%;
 }
 
 .navlink {
   font-size: 30px;
-  padding: 6px 10px;
-  border-radius: 12px;
+  padding: 16px 1rem;
+  border-radius: 60%;
+  width: fit-content;
+  position: relative;
 }
 
 .navlink:hover {
-  background-color: lightgrey;
+  background-color: #3b5561;
+  transform: scale(1.03);
 }
+
+.active {
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
+/* .active {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-color: white;
+} */
+
+
+
+
+
 
 
 @media (max-width: 1024px) {
@@ -98,8 +111,8 @@ a {
     --titlesize: 1.3rem;
     --descripsize: 0.8rem;
     --titlespacing: .3rem;
-    --cardlabelsize: 1rem;
-    --projectdescripsize: 0.7rem;
+    --mainsize: 1rem;
+    --descripsize: 0.7rem;
   }
 
   .content {
@@ -159,8 +172,8 @@ a {
     --titlesize: 1rem;
     --descripsize: 0.7rem;
     --titlespacing: .2rem;
-    --cardlabelsize: 0.7rem;
-    --projectdescripsize: 0.5rem;
+    --mainsize: 0.7rem;
+    --descripsize: 0.5rem;
   }
 
   .content {

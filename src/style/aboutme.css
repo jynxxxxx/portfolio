@@ -1,45 +1,129 @@
 /* aboutme */
+.sectionctn:has(.aboutctn) {
+  background-image: linear-gradient(to right, #662D8C, #4e94ca);
+  overflow-y: hidden
+}
 
 .aboutctn {
-  padding: 48px 0 64px;
-  width: 80%;
-  margin: auto;
-}
-
-.aboutme {
   display: grid;
   grid-template-columns: 40% 60%;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  gap: 5rem;
+  margin: auto;
+  padding: 2rem;
+  height: 100%;
+  width: 80%;
 }
 
-.aboutintro {
-  font-family: var(--main-font);
-  font-size: var(--descripsize);
-  margin: 0;
-}
-
-.selfpic {
+.aboutimg {
   display: flex;
-  justify-self: center;
-  width: 100%;
+  align-items: last baseline;
+  width: fit-content;
+  padding-right: 1rem;
 }
 
-.selfpic img {
-  object-fit: contain;
-  width: 100%;
+
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-family: var(--main-font);
+  font-size: var(--mainsize);
 }
 
 .aboutblurbs {
-  margin-top: 3rem;
-  font-family: var(--main-font);
-  font-size: var(--descripsize);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-self: left;
+  gap: 2rem;
+  padding-left: 5rem;
+}
+
+.loves {
+  font-weight: 600;
+}
+
+/* icon carousel */
+.carousel {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  text-align: center;
+  align-items: center;
+  width: 100%;
+  font-family: var(--main-font);
 }
+
+.iconctn {
+  box-sizing: border-box;
+  height: 10rem;
+  padding: 1rem 0;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  background-color: rgb(226, 236, 236, 0.3);
+}
+
+.iconctn:before,
+.iconctn:after {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.iconctn:before {
+  left: 0;
+  background: linear-gradient(to left, rgb(226, 236, 236, 0), #5A5CA8);
+}
+
+.iconctn:after {
+  right: 0;
+  background: linear-gradient(to right, rgb(226, 236, 236, 0), #4F8CC5);
+}
+
+.icontrack {
+  display: flex;
+  animation: 35s slide infinite linear;
+}
+
+.icon {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 5rem;
+}
+
+.iconname {
+  font-size: var(--mainsize);
+}
+
+.icon img {
+  margin: auto;
+}
+
+.langs {
+  padding-top: var(--mainsize);
+  font-size: var(--mainsize);
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
+
 
 @media (max-width: 1024px) {
   .aboutctn {
@@ -58,6 +142,19 @@
 
   .selfpic img {
     width: 100%;
+  }
+
+  .iconctn {
+    height: 7rem;
+  }
+
+  .icon {
+    margin: 0 3rem;
+  }
+
+  .icon img {
+    width: 75px;
+    height: 75px;
   }
 }
 
@@ -80,5 +177,18 @@
   .selfpic img {
     margin: auto;
     width: 80%;
+  }
+
+  .iconctn {
+    height: 5rem;
+  }
+
+  .icon {
+    margin: 0 1rem;
+  }
+
+  .icon img {
+    width: 60px;
+    height: 60px;
   }
 }

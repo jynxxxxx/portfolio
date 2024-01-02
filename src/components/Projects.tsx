@@ -67,19 +67,28 @@ const projects: ProjectDetails[] = [
 
 ];
 
-export function ProjectDetailsList({ projectLimit = projects.length }) {
-  const limitedProjects = projects.slice(0, projectLimit);
+export function ProjectDetailsList({ slicestart = 0, projectLimit = projects.length }) {
+  const limitedProjects = projects.slice(slicestart, projectLimit);
 
   return (
-    <div className="projectctn">
+    <div className="projectrow">
       {limitedProjects.map((project, index) => (
-        <div key={index} {...project} >
-          <div className={`projectcard ${index % 2 === 0 ? 'left' : 'right'}`}>
-            <div className="cardlabel">{project.title}</div>
-            <div className="projectdescrip">
-              <div className="maindescrip">{project.descrip}</div>
-              <div className="tools"> Built using:
-                <div className="toolsctn">
+        <div key={index} >
+          <div className={`projectcard ${index}`}>
+            <div className="screenshot">
+              <div className="design"></div>
+              <img
+                className="projectimg"
+                src={project.image}
+                alt="website screenshot"
+              />
+            </div>
+
+            <div className="details">
+              <div className="projecttitle">{project.title}</div>
+              <div className="descrip">{project.descrip}</div>
+              <div className="toolsctn"> Built using:
+                <div className="tools">
                   {project.tools.map((tool, toolIndex) => (
                     <span key={toolIndex} className="tool">{tool}</span>
                   ))}
@@ -89,14 +98,6 @@ export function ProjectDetailsList({ projectLimit = projects.length }) {
                 <a href={project.gitLink}> <VscGithubInverted className="link" /> </a>
                 <a href={project.liveLink}> <VscLinkExternal className="link" /> </a>
               </div>
-            </div>
-            <div className="screenshot">
-              <div className="design"></div>
-              <img
-                className="projectimg"
-                src={project.image}
-                alt="website screenshot"
-              />
             </div>
           </div>
         </div>
