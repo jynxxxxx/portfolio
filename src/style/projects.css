@@ -2,6 +2,7 @@
 .sectionctn:has(.projectctn) {
   background-image: linear-gradient(to right, #4e94ca, #7fd8e7);
   overflow-y: scroll;
+  height: fit-content;
 }
 
 .projectctn {

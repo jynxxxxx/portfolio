@@ -27,7 +27,10 @@
 .content {
   opacity: 1;
   position: relative;
-  display: flex;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
 }
 
 section {

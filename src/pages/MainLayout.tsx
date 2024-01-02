@@ -38,6 +38,7 @@ export default function MainLayout() {
         return 'default color';
     }
   };
+
   return (
     <div className="masterctn">
       <div className="header" style={headerStyle}>
@@ -53,3 +54,5 @@ export default function MainLayout() {
     </div>
   );
 }
+
+
