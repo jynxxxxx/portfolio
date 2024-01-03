@@ -38,14 +38,14 @@ export default function MainLayout() {
   };
 
   const getActiveLinkFromScroll = () => {
-    // You may need to adjust this logic based on your specific layout and content structure
-    const getElementOffsetTop = (elementId: string): number => {
-      const element = document.getElementById(elementId);
+
+    const getElementOffsetTop = (id: string): number => {
+      const element = document.getElementById(id);
       return element ? element.offsetTop : 0;
     };
 
     const sectionOffsets = {
-      home: 0,
+      home: getElementOffsetTop('home') - 100,
       about: getElementOffsetTop('about') - 100,
       projects: getElementOffsetTop('projects') - 100,
       contact: getElementOffsetTop('contact') - 100,
@@ -67,6 +67,11 @@ export default function MainLayout() {
     return activeLink;
   };
 
+  // Event listener for scrolling
+  window.addEventListener('scroll', () => {
+    getActiveLinkFromScroll();
+  });
+
   const handleScroll = () => {
     const scrollActiveLink = getActiveLinkFromScroll();
     setActiveLink(scrollActiveLink);
@@ -80,10 +85,31 @@ export default function MainLayout() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    // window.addEventListener('scroll', addClassbyScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      // window.removeEventListener('scroll', addClassbyScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const pages = document.querySelectorAll('.page')
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('show', entry.isIntersecting)
+        })
+      },
+      {
+        rootMargin: "-600px 0px 0px -200px",
+      }
+    )
+
+    pages.forEach(page => {
+      observer.observe(page)
+    })
   }, []);
 
 

@@ -1,5 +1,6 @@
 .sectionctn {
-  overflow-y: hidden
+  overflow-y: scroll;
+  /* height: 150vh */
 }
 
 .homectn {
@@ -8,6 +9,7 @@
   gap: 5rem;
   margin: auto;
   background-image: linear-gradient(to right, #ED1E79, #662D8C);
+
 }
 
 .homeIntro {

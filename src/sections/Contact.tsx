@@ -5,7 +5,7 @@ import '../style/contact.css'
 export function Contact({ id }: { id: string }) {
 
   return (
-    <section id={id}>
+    <section id={id} className='page'>
       <div className='sectionctn'>
         <div className="contactctn">
           <div className="contact">
