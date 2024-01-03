@@ -11,14 +11,16 @@
   margin: auto;
   padding: 2rem;
   height: 100%;
-  width: 80%;
+  width: 90%;
 }
 
 .aboutimg {
   display: flex;
-  align-items: last baseline;
+  align-items: end;
+  justify-content: space-around;
   width: fit-content;
   padding-right: 1rem;
+  z-index: 5;
 }
 
 
