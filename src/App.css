@@ -36,6 +36,8 @@
 section {
   width: 100vw;
   opacity: 0;
+  height: fit-content;
+  min-height: 100vh;
 }
 
 .page {
@@ -53,8 +55,8 @@ section {
 
 .sectionctn {
   width: 100vw;
-  height: 100vh;
   padding-top: 100px;
+  min-height: 100vh;
 }
 
 ul,
@@ -152,10 +154,6 @@ a:-webkit-any-link {
     border-radius: 12px;
   }
 
-  .introctn {
-    height: min-content;
-    padding-top: 40px
-  }
 
   .nameintro {
     font-size: 2.5rem;
@@ -215,10 +213,6 @@ a:-webkit-any-link {
 
   .separate {
     margin-top: 0;
-  }
-
-  .introctn {
-    padding-top: 30px;
   }
 
   .nameintro {
