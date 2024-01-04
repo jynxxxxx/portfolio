@@ -27,7 +27,7 @@ export default function AboutMe({ id }: { id: string }) {
 
           <div className='aboutme'>
             <div className="aboutintro">
-              <h1>Welcome to my corner of the digital world! </h1>
+              <h1 className='aboutwelcome'>Welcome to my corner of the digital world! </h1>
               <div className='aboutsub'>
                 I am  a driven self-taught web developer who's on a mission to break into the industry.
               </div>

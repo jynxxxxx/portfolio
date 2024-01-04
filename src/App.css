@@ -42,6 +42,7 @@
 
 .sectionctn {
   padding-top: var(--headerheight);
+  padding-bottom: var(--headerheight);
   min-height: calc(100vh - var(--headerheight));
 }
 
@@ -102,105 +103,32 @@ a:-webkit-any-link {
 
 @media (max-width: 1024px) {
   :root {
-    --titlefontsize: 1.3rem;
-    --mainfontsize: 0.8rem;
-    --titlespacing: .3rem;
+    --headerheight: 60px;
+    --titlefontsize: 1.5rem;
+    --headerfontsize: 1.3rem;
     --mainfontsize: 1rem;
-    --mainfontsize: 0.7rem;
-  }
-
-  .content {
-    margin-top: 70px;
-  }
-
-  .header {
-    height: 70px;
-    font-size: 60px;
+    --detailfontsize: 0.7rem;
+    --titlespacing: .4rem;
   }
 
   .navbarbtns {
-    gap: 0.5rem;
-    padding-right: 3%;
+    padding-left: 1rem;
+    gap: 4rem;
   }
-
-  .navlink {
-    font-size: 25px;
-    padding: 4px 6px;
-    border-radius: 12px;
-  }
-
-
-  .nameintro {
-    font-size: 2.5rem;
-    letter-spacing: 1.5rem;
-    transform: scaleY(1.5);
-    padding-top: 10%;
-    padding-left: calc(65% - (100vw / 2));
-  }
-
-  .introsubtext {
-    font-size: 2rem;
-    letter-spacing: 1.5rem;
-    padding-top: 5%;
-    padding-bottom: 25%;
-    padding-left: calc(85% - (100vw / 2));
-  }
-
-  .skillctn {
-    padding: 16px 16px 32px;
-  }
-
-  .seemore,
-  .learnmore {
-    padding: 16px 0;
-  }
-
 }
 
 @media (max-width: 480px) {
   :root {
-    --titlefontsize: 1rem;
+    --headerheight: 50px;
+    --titlefontsize: 1.3rem;
+    --headerfontsize: 0.9rem;
     --mainfontsize: 0.7rem;
+    --detailfontsize: 0.5rem;
     --titlespacing: .2rem;
-    --mainfontsize: 0.7rem;
-    --mainfontsize: 0.5rem;
-  }
-
-  .content {
-    margin-top: 40px;
-  }
-
-  .header {
-    height: 40px;
-    font-size: 30px;
   }
 
   .navbarbtns {
-    gap: 0.5rem;
-    padding-right: 3%;
+    padding-left: 0.5rem;
   }
 
-  .navlink {
-    font-size: 15px;
-    padding: 2px 4px;
-    border-radius: 12px;
-  }
-
-  .separate {
-    margin-top: 0;
-  }
-
-  .nameintro {
-    font-size: 1rem;
-    letter-spacing: 1rem;
-    padding-top: 15%;
-  }
-
-  .introsubtext {
-    font-size: 0.7rem;
-    letter-spacing: 1rem;
-    padding-top: 10%;
-    padding-bottom: 30%;
-    padding-left: calc(85% - (100vw / 2));
-  }
 }

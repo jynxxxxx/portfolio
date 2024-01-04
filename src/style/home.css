@@ -29,15 +29,20 @@
 
 
 @media (max-width: 1024px) {
-
-  .homeHi {
-    font-size: 2rem;
+  .homeIntro {
+    margin-left: auto;
   }
-
 }
 
 @media (max-width: 480px) {
-  .homeHi {
-    font-size: 2rem;
+  .homectn {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
+    height: 90vh;
+  }
+
+  .homeIntro {
+    margin-left: 0;
+    align-items: center;
   }
 }
