@@ -1,33 +1,42 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio website! This site showcases my projects, skills, and experience in the field of web development. Whether you're a potential employer, collaborator, or just curious about my work, feel free to explore.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Usage](#usage)
+- [Media Queries](#media-queries)
+- [Attributions](#attributions)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
+This portfolio website serves as a central hub for all things related to my professional journey. From coding projects to my skillset, you'll find it all here.
 
-## Expanding the ESLint configuration
+## Features
+- **Project Showcase**: View detailed information about my coding projects, including descriptions, technologies used, and live demos.
+- **Skills**: Explore the various technologies, programming languages, and tools I am proficient in.
+- **Work Experience**: Gain insights into my professional background and experiences.
+- **Contact Information**: Connect with me through provided contact details and social media links.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies
+Built using:
+- HTML5
+- CSS3
+- TypeScript
+- Vite/React
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
+1. Visit the [my Portfolio](https://portfolio-jynxxxxxs-projects.vercel.app/) 
+2. Explore different sections to learn more about me, my skills, and projects.
+3. Connect with me through the provided contact information.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Media Queries
+This website is designed to be responsive across various devices using media queries. Here's how it adapts:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Mobile Devices (<= 480px)**: Streamlined layout for easy navigation on smaller screens.
+- **Tablet Devices (481px - 768px)**: Optimized layout to make efficient use of tablet screen sizes.
+- **Desktop Devices (> 768px)**: Full-width display with enhanced visuals for larger screens.
 
-
-linkedin Icon from <a target="_blank" href="https://icons8.com/icon/8808/linkedin">LinkedIn</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+## Attributions
+LinkedIn Icon from <a target="_blank" href="https://icons8.com/icon/8808/linkedin">Icons8</a>
