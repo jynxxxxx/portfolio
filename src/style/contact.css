@@ -6,7 +6,6 @@
 
 .contactctn {
   width: 100%;
-  padding-top: 5rem;
 }
 
 .contact {
@@ -20,7 +19,7 @@
 
 .contactdesc {
   font-family: var(--main-font);
-  font-size: var(--titlesize);
+  font-size: var(--titlefontsize);
 }
 
 .contactlist {
@@ -29,7 +28,7 @@
   justify-content: space-between;
   width: 80%;
   margin: auto;
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 .linkctn {
@@ -64,7 +63,7 @@
 
 .linktxt {
   font-family: var(--main-font);
-  font-size: calc(var(--mainsize) * 0.8);
+  font-size: calc(var(--mainfontsize) * 0.8);
   text-align: center;
 }
 

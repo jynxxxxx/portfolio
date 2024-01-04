@@ -5,26 +5,26 @@
 .homectn {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  margin: auto;
+  gap: 2rem;
+  justify-self: center;
   background-image: linear-gradient(to right, #ED1E79, #662D8C);
+  justify-content: center;
+  align-items: center;
 }
 
 .homeIntro {
-  width: fit-content;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-left: auto;
-  padding-top: 14rem;
-  font-size: var(--titlesize);
+  justify-content: center;
+  font-size: var(--titlefontsize);
   font-family: var(--main-font);
 }
 
 .homeimg {
   display: flex;
   align-items: last baseline;
-  height: 100%;
 }
 
 

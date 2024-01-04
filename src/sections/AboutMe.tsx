@@ -1,6 +1,5 @@
 import smallimg from '../assets/images/aboutJ-300w.png'
 import medimg from '../assets/images/aboutJ-400w.png'
-import lgimg from '../assets/images/aboutJ-600w.png'
 import IconCarousel from '../components/IconCarousel'
 import '../style/aboutme.css'
 
@@ -21,7 +20,7 @@ export default function AboutMe({ id }: { id: string }) {
                 srcSet={medimg} />
 
               <img
-                src={lgimg}
+                src={medimg}
                 alt="web developer Julia Kim" />
             </picture>
           </div>
@@ -29,7 +28,9 @@ export default function AboutMe({ id }: { id: string }) {
           <div className='aboutme'>
             <div className="aboutintro">
               <h1>Welcome to my corner of the digital world! </h1>
-              I am  a driven self-taught web developer who's on a mission to break into the industry.
+              <div className='aboutsub'>
+                I am  a driven self-taught web developer who's on a mission to break into the industry.
+              </div>
             </div>
             <div className='aboutblurbs'>
               <div className='loves'>Loves:</div>

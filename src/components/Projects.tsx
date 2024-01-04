@@ -82,21 +82,22 @@ export function ProjectDetailsList({ slicestart = 0, projectLimit = projects.len
                 src={project.image}
                 alt="website screenshot"
               />
+              <div className="projectlinks">
+                <a href={project.gitLink}> <VscGithubInverted className="link" /> </a>
+                <a href={project.liveLink}> <VscLinkExternal className="link" /> </a>
+              </div>
             </div>
 
             <div className="details">
               <div className="projecttitle">{project.title}</div>
               <div className="descrip">{project.descrip}</div>
-              <div className="toolsctn"> Built using:
+              <div className="toolsctn">
+                <div className="built"> Built using:</div>
                 <div className="tools">
                   {project.tools.map((tool, toolIndex) => (
                     <span key={toolIndex} className="tool">{tool}</span>
                   ))}
                 </div>
-              </div>
-              <div className="projectlinks">
-                <a href={project.gitLink}> <VscGithubInverted className="link" /> </a>
-                <a href={project.liveLink}> <VscLinkExternal className="link" /> </a>
               </div>
             </div>
           </div>

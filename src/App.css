@@ -7,18 +7,12 @@
 :root {
   margin: 0;
   padding: 0;
-  --headerwidth: 300px;
-  --titlesize: 3rem;
-  --descripsize: 1.5rem;
+  --headerheight: 70px;
+  --titlefontsize: 2rem;
+  --headerfontsize: 1.5rem;
+  --mainfontsize: 1.3rem;
+  --detailfontsize: 1rem;
   --titlespacing: .7rem;
-  --mainsize: 2rem;
-  --background-color: rgb(235, 245, 250);
-  --darkcolor: #103647;
-  --switchcolor: #685445;
-  --medswitchcolor: #B89A81;
-  --lightswitchcolor: #e2cbba;
-  --lightcolor: rgb(210, 219, 223);
-  --grey: #98AFBA;
   --title-font: 'Bebas Neue', sans-serif;
   --main-font: 'Jost', sans-serif;
   color: white;
@@ -31,13 +25,6 @@
 
 .content::-webkit-scrollbar {
   display: none;
-}
-
-section {
-  width: 100vw;
-  opacity: 0;
-  height: fit-content;
-  min-height: 100vh;
 }
 
 .page {
@@ -54,9 +41,8 @@ section {
 }
 
 .sectionctn {
-  width: 100vw;
-  padding-top: 100px;
-  min-height: 100vh;
+  padding-top: var(--headerheight);
+  min-height: calc(100vh - var(--headerheight));
 }
 
 ul,
@@ -78,8 +64,7 @@ a:-webkit-any-link {
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
-  font-size: 40px;
+  height: var(--headerheight);
   font-family: var(--title-font);
   z-index: 10;
   display: flex;
@@ -95,8 +80,8 @@ a:-webkit-any-link {
 }
 
 .navlink {
-  font-size: 30px;
-  padding: 16px 1rem;
+  font-size: var(--headerfontsize);
+  padding: 8px 1rem;
   border-radius: 60%;
   width: fit-content;
   position: relative;
@@ -113,25 +98,15 @@ a:-webkit-any-link {
   mix-blend-mode: screen;
 }
 
-/* .active {
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-color: white;
-} */
-
-
-
-
-
 
 
 @media (max-width: 1024px) {
   :root {
-    --titlesize: 1.3rem;
-    --descripsize: 0.8rem;
+    --titlefontsize: 1.3rem;
+    --mainfontsize: 0.8rem;
     --titlespacing: .3rem;
-    --mainsize: 1rem;
-    --descripsize: 0.7rem;
+    --mainfontsize: 1rem;
+    --mainfontsize: 0.7rem;
   }
 
   .content {
@@ -184,11 +159,11 @@ a:-webkit-any-link {
 
 @media (max-width: 480px) {
   :root {
-    --titlesize: 1rem;
-    --descripsize: 0.7rem;
+    --titlefontsize: 1rem;
+    --mainfontsize: 0.7rem;
     --titlespacing: .2rem;
-    --mainsize: 0.7rem;
-    --descripsize: 0.5rem;
+    --mainfontsize: 0.7rem;
+    --mainfontsize: 0.5rem;
   }
 
   .content {

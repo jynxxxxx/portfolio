@@ -1,7 +1,6 @@
 import '../style/home.css'
 import smallimg from '../assets/images/juliamain-300w.png'
 import medimg from '../assets/images/juliamain-400w.png'
-import lgimg from '../assets/images/juliamain-600w.png'
 
 export default function Home({ id }: { id: string }) {
 
@@ -24,7 +23,7 @@ export default function Home({ id }: { id: string }) {
               srcSet={medimg} />
 
             <img
-              src={lgimg}
+              src={medimg}
               alt="web developer Julia Kim" />
           </picture>
         </div>
