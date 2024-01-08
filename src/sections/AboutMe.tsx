@@ -6,7 +6,7 @@ import '../style/aboutme.css'
 export default function AboutMe({ id }: { id: string }) {
 
   return (
-    <section id={id} className='page'>
+    <section id={id} className='page '>
       <div className='sectionctn'>
         <div className="aboutctn">
           <div className="aboutimg">

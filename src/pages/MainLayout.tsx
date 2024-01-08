@@ -85,31 +85,11 @@ export default function MainLayout() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    // window.addEventListener('scroll', addClassbyScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      // window.removeEventListener('scroll', addClassbyScroll);
+
     };
-  }, []);
-
-  useEffect(() => {
-    const pages = document.querySelectorAll('.page')
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          entry.target.classList.toggle('show', entry.isIntersecting)
-        })
-      },
-      {
-        rootMargin: "-600px 0px 0px -200px",
-      }
-    )
-
-    pages.forEach(page => {
-      observer.observe(page)
-    })
   }, []);
 
 
@@ -119,7 +99,7 @@ export default function MainLayout() {
         <NavBar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
       </div>
 
-      <div className="content" style={{ minHeight: '60vh' }}>
+      <div className="content">
         <Home id="home" />
         <AboutMe id="about" />
         <Projects id="projects" />

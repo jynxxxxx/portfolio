@@ -5,7 +5,7 @@ import medimg from '../assets/images/juliamain-400w.png'
 export default function Home({ id }: { id: string }) {
 
   return (
-    <section id={id} className='page show'>
+    <section id={id} className='page'>
       <div className='sectionctn homectn'>
         <div className="homeIntro">
           <h1 className="homeHi">Hi 👋, I'm Julia.</h1>
