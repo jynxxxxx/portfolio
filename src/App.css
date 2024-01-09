@@ -16,6 +16,7 @@
   --title-font: 'Bebas Neue', sans-serif;
   --main-font: 'Jost', sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 .content {

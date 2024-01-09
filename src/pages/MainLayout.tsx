@@ -94,7 +94,7 @@ export default function MainLayout() {
 
 
   return (
-    <div className="masterctn">
+    <div className="masterctn" style={headerStyle}>
       <div className="header" style={headerStyle}>
         <NavBar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
       </div>
