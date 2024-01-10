@@ -32,7 +32,7 @@
 @keyframes entryExitAnimation {
   entry 0% {
     opacity: 0;
-    clip-path: inset(0% 20%);
+    clip-path: inset(0% 50%);
   }
 
   entry 100% {
@@ -47,7 +47,7 @@
 
   exit 100% {
     opacity: 0;
-    clip-path: inset(0% 20%);
+    clip-path: inset(0% 50%);
   }
 }
 
