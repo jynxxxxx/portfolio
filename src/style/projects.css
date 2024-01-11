@@ -19,7 +19,34 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  transform: translateX(70%);
 }
+
+.row-animation {
+  animation: ease-in-out slidein 2s forwards;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(70%);
+  }
+
+  50% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* .projectrow:nth-child(odd) {
+  animation;
+}
+
+.projectrow:nth-child(even) {
+  animation-delay: 0.4s;
+} */
 
 .projectcard {
   display: grid;
@@ -29,6 +56,10 @@
   width: 25vw;
   gap: 1rem;
   position: relative;
+}
+
+.projectcard:hover {
+  transform: scale(1.1);
 }
 
 .details {

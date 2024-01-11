@@ -60,6 +60,7 @@
 .sectionctn {
   padding: calc(var(--headerheight) + 1rem) 0;
   min-height: calc(100vh - var(--headerheight));
+  overflow-x: hidden;
 }
 
 ul,
