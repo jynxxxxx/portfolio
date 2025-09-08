@@ -5,6 +5,8 @@
   --color-bright2: #AE38F5;
   --color-bright3: #00FFFF;
   --color-dark: #1C172B;
+  --font-title: 'Bebas Neue', sans-serif;
+  --font-main: 'Jost', sans-serif;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -65,15 +67,25 @@
   background: linear-gradient(135deg, var(--color-bright3), white);
 }
 
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
 
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --headerheight: 70px;
   --titlefontsize: 2rem;
-  --headerfontsize: 1.5rem;
   --mainfontsize: 1.3rem;
   --detailfontsize: 1rem;
   --titlespacing: .7rem;
@@ -121,12 +133,6 @@
   animation-range: entry cover 30% exit cover 30%;
 }
 
-.sectionctn {
-  padding: calc(var(--headerheight) + 1rem) 0;
-  min-height: calc(100vh - var(--headerheight));
-  overflow-x: hidden;
-}
-
 ul,
 li {
   list-style-type: none;
@@ -139,30 +145,7 @@ a:-webkit-any-link {
   color: inherit;
 }
 
-/* header */
-.header {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--headerheight);
-  font-family: var(--title-font);
-  z-index: 10;
-  display: flex;
-}
-
-.navbarbtns {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 7rem;
-  padding-left: 3rem;
-  width: 100%;
-}
-
 .navlink {
-  font-size: var(--headerfontsize);
   padding: 8px 1rem;
   border-radius: 60%;
   width: fit-content;
@@ -170,47 +153,35 @@ a:-webkit-any-link {
 }
 
 .navlink:hover {
-  background-color: #3b5561;
-  transform: scale(1.03);
+  background: linear-gradient(135deg, var(--color-bright1), var(--color-bright2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .active {
-  background-color: white;
-  color: black;
-  mix-blend-mode: screen;
+  background: linear-gradient(135deg, var(--color-bright1), var(--color-bright2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 
 
 @media (max-width: 1024px) {
   :root {
-    --headerheight: 60px;
     --titlefontsize: 1.5rem;
-    --headerfontsize: 1.3rem;
     --mainfontsize: 1rem;
     --detailfontsize: 0.7rem;
     --titlespacing: .4rem;
-  }
-
-  .navbarbtns {
-    padding-left: 1rem;
-    gap: 4rem;
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --headerheight: 50px;
     --titlefontsize: 1.3rem;
-    --headerfontsize: 0.9rem;
     --mainfontsize: 0.7rem;
     --detailfontsize: 0.5rem;
     --titlespacing: .2rem;
   }
-
-  .navbarbtns {
-    padding-left: 0.5rem;
-    gap: 1rem;
-  }
-
 }

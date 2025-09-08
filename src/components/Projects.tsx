@@ -1,105 +1,123 @@
-import boulder from "../assets/images/boulder.png"
-import memory from "../assets/images/memory.png"
-import battleship from "../assets/images/battleship.png"
-import knight from "../assets/images/knight.png"
-import findme from "../assets/images/findme.png"
-import membersonly from "../assets/images/membersonly.png"
-import { VscGithubInverted, VscLinkExternal } from "react-icons/vsc"
+import { ExternalLink, Code2 } from "lucide-react";
+import { ReactComponent as GithubIcon } from '../assets/icons/git_logo_white.svg';
 
 type ProjectDetails = {
   title: string;
-  descrip: string;
-  image: string;
+  description: string;
   gitLink: string;
   liveLink: string;
-  tools: string[];
+  techStack: string[];
+  hasDemo: boolean;
 };
 
 const projects: ProjectDetails[] = [
   {
-    title: "BoulderBuddy",
-    descrip: "A social media copycat for climbers to share their next climbing location",
-    image: boulder,
-    gitLink: "https://github.com/jynxxxxx/boulderbuddy",
-    liveLink: "https://boulderbook.vercel.app/",
-    tools: ["Typescript", "Next.js", "React", "TRPC"],
-  },
-  {
-    title: "MembersOnly",
-    descrip: "A message board that reveals details to members only",
-    image: membersonly,
-    gitLink: "https://github.com/jynxxxxx/membersOnly",
-    liveLink: "https://membersonly-3l2u.onrender.com/",
-    tools: ["Express", "EJS", "Mongoose", "Passport"],
-  },
-  {
-    title: "FindMe",
-    descrip: "A recreation of the classic 'Where's Waldo' game",
-    image: findme,
-    gitLink: "https://github.com/jynxxxxx/findme",
-    liveLink: "https://jynxxxxx.github.io/findme/",
-    tools: ["Javascript", "React", "Vite"],
-  },
-  {
-    title: "BattleShip",
-    descrip: "The classic Battleship game recreated for desktop, complete with CPU attack logic",
-    image: battleship,
-    gitLink: "https://github.com/jynxxxxx/battleship",
-    liveLink: "https://jynxxxxx.github.io/battleship/",
-    tools: ["Javascript", "Webpack", "Babel"],
-  },
-  {
-    title: "MemoryCard",
-    descrip: "A Pokemon based memory game",
-    image: memory,
-    gitLink: "https://github.com/jynxxxxx/memorycard",
-    liveLink: "https://jynxxxxx.github.io/memorycard/",
-    tools: ["Javascript", "React", "Vite"],
-  },
-  {
-    title: "Knight Travails",
-    descrip: "A small app that calculates the minimum number of moves to get from point A to point B",
-    image: knight,
-    gitLink: "https://github.com/jynxxxxx/knight_travails",
-    liveLink: "https://jynxxxxx.github.io/knight_travails/",
-    tools: ["Javascript", "Webpack"],
+    title: "RAG Chatbot",
+    description: "An AI-powered document Q&A assistant using Retrieval-Augmented Generation to answer questions from uploaded files with citations.",
+    gitLink: "https://github.com/jynxxxxx/ai_doc_q-a",
+    liveLink: "",
+    techStack: ["TypeScript", "Python", "FastAPI", "React", "Tailwind CSS", "Supabase", "Gemini AI", "ChromaDB"],
+    hasDemo: false,
   },
 
+  {
+    title: "AI README Generator",
+    description: "A tool that auto-generates professional README files for GitHub projects using AI, saving developers time.",
+    gitLink: "https://github.com/jynxxxxx/READme_generator",
+    liveLink: "",
+    techStack: ["TypeScript", "FastAPI", "Docker", "Tailwind CSS", "React", "Gemini AI"],
+    hasDemo: false,
+  },
+
+  {
+    title: "Career Copilot",
+    description: "An AI-driven 자기소개서 and career assistant that analyzes job postings, rewrites essays, and guides applicants with tailored feedback.",
+    gitLink: "https://github.com/jynxxxxx/job_hunter",
+    liveLink: "https://www.barojiwon.com/",
+    techStack: ["Firebase", "React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Supabase"],
+    hasDemo: true,
+  },
+
+  {
+    title: "여성 대리운전",
+    description: "A Korean service platform connecting women drivers with passengers who prefer female-designated drivers for safety and comfort.",
+    gitLink: "https://github.com/jynxxxxx/luna_ride",
+    liveLink: "https://www.ridemobl.com/",
+    techStack: ["Vite", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    hasDemo: true,
+  },
+  {
+    title: "Gaming Credit Card Landing",
+    description: "A sleek marketing site for a gamer-focused credit card, featuring perks, rewards, and community integration.",
+    gitLink: "https://github.com/jynxxxxx/xp-card-landing-page",
+    liveLink: "https://xp-card-landing-page.vercel.app/",
+    techStack: ["Supabase", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    hasDemo: true,
+  },
 ];
 
-export function ProjectDetailsList({ slicestart = 0, projectLimit = projects.length }) {
-  const limitedProjects = projects.slice(slicestart, projectLimit);
-
+export function ProjectDetailsList() {
   return (
-    <div className="projectrow">
-      {limitedProjects.map((project, index) => (
-        <div key={index} >
-          <div className={`projectcard ${index}`}>
-            <div className="screenshot">
-              <div className="design"></div>
-              <img
-                className="projectimg"
-                src={project.image}
-                alt="website screenshot"
-              />
-              <div className="projectlinks">
-                <a href={project.gitLink}> <VscGithubInverted className="link" /> </a>
-                <a href={project.liveLink}> <VscLinkExternal className="link" /> </a>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {projects.map((project, index) => (
+        <div
+          key={project.title}
+          className={"bg-white/10 rounded-2xl p-6 hover-lift transition-smooth ring-1 ring-bright3/30 hover:ring-bright3/50 hover:shadow-lg shadow-white/30 shadow-md hover:ring-3"}
+          style={{ animationDelay: `${index * 0.1}s` }}
+        >
+          {/* Project Header */}
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+            {project.hasDemo ? (
+              <div className="flex items-center gap-1 text-xs text-bright3">
+                <ExternalLink className="w-3 h-3" />
+                Live Demo
               </div>
-            </div>
+            ) : (
+              <div className="flex items-center gap-1 text-xs text-white/40">
+                <Code2 className="w-3 h-3" />
+                Code Only
+              </div>
+            )}
+          </div>
 
-            <div className="details">
-              <div className="projecttitle">{project.title}</div>
-              <div className="descrip">{project.descrip}</div>
-              <div className="toolsctn">
-                <div className="built"> Built using:</div>
-                <div className="tools">
-                  {project.tools.map((tool, toolIndex) => (
-                    <span key={toolIndex} className="tool">{tool}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
+          {/* Description */}
+          <p className="mb-4 leading-relaxed text-white/50 text-sm">
+            {project.description}
+          </p>
+
+          {/*tech stack */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {project.techStack.map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-white/10 text-white/40 text-xs rounded-xl border border-white/20"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/*buttons*/}
+          <div className="flex gap-3">
+            <button
+              className="bg-black flex group border-gray-900 hover:border-bright3/50 rounded-lg px-3 py-1"
+            >
+              <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-sm">
+                <GithubIcon className="w-4 h-4 transition-transform group-hover:scale-110" />
+                Code
+              </a>
+            </button>
+            {project.liveLink && (
+              <button
+                className="flex group bg-bright3/10 hover:bg-bright3/20 text-bright3 border-bright3/30 rounded-lg px-3 py-1"
+              >
+                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2  text-sm">
+                  <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  Demo
+                </a>
+              </button>
+            )}
           </div>
         </div>
       ))}
