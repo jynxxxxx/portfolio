@@ -1,53 +1,3 @@
-/* aboutme */
-.sectionctn:has(.aboutctn) {
-  background-image: linear-gradient(to right, #662D8C, #4e94ca);
-  overflow-y: hidden
-}
-
-.aboutctn {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 5rem;
-  margin: auto;
-  padding: 2rem;
-  height: 100%;
-  width: 90%;
-}
-
-.aboutimg {
-  display: flex;
-  align-items: end;
-  justify-content: space-around;
-  width: fit-content;
-  padding-right: 1rem;
-  z-index: 5;
-}
-
-.aboutme {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  font-family: var(--main-font);
-  font-size: var(--headerfontsize);
-}
-
-.aboutblurbs {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  justify-self: left;
-  gap: 2rem;
-  padding-left: 5rem;
-}
-
-.loves {
-  font-weight: 600;
-}
-
-.lovesitems {
-  font-size: var(--mainfontsize);
-}
-
 /* icon carousel */
 .carousel {
   display: flex;
@@ -63,11 +13,10 @@
   padding: 1rem 0;
   margin: auto;
   overflow: hidden;
-  width: 40vw;
   white-space: nowrap;
   position: relative;
   display: flex;
-  background-color: rgb(226, 236, 236, 0.3);
+  background-color: rgb(226, 236, 236, 0.1);
 }
 
 .iconctn:before,
@@ -82,12 +31,12 @@
 
 .iconctn:before {
   left: 0;
-  background: linear-gradient(to left, rgb(226, 236, 236, 0), #5A5FAA);
+  background: linear-gradient(to left, rgba(209, 210, 210, 0), #000000);
 }
 
 .iconctn:after {
   right: 0;
-  background: linear-gradient(to right, rgb(226, 236, 236, 0), #5189C4);
+  background: linear-gradient(to right, rgb(209, 210, 210, 0), #000000);
 }
 
 .icontrack {
