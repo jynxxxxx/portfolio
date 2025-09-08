@@ -5,6 +5,7 @@ import '../App.css'
 import NavBar from "../components/NavBar";
 import { useEffect, useState } from "react";
 import Hero from "../sections/Hero";
+import TechStack from "../sections/Techstack";
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState('hero');
@@ -24,6 +25,7 @@ export default function Home() {
       hero: getElementOffsetTop('hero') - 100,
       about: getElementOffsetTop('about') - 100,
       projects: getElementOffsetTop('projects') - 100,
+      techstack: getElementOffsetTop('techstack') - 100,
       contact: getElementOffsetTop('contact') - 100,
     };
 
@@ -65,14 +67,13 @@ export default function Home() {
 
   return (
     <div className="masterctn">
-      <div className="header">
-        <NavBar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
-      </div>
+      <NavBar activeLink={activeLink} handleNavLinkClick={handleNavLinkClick} />
 
       <div className="content">
         <Hero id="hero" />
-        <AboutMe id="about" />
         <Projects id="projects" />
+        <AboutMe id="about" />
+        <TechStack id="techstack" />
         <Contact id="contact" />
       </div>
     </div>

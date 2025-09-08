@@ -1,7 +1,3 @@
-.sectionctn {
-  overflow-y: hidden
-}
-
 .homectn {
   display: grid;
   grid-template-columns: 1fr 1fr;
