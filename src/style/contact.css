@@ -1,9 +1,4 @@
 /* Contact Component */
-.sectionctn:has(.contactctn) {
-  overflow-y: hidden;
-  background-image: linear-gradient(to right, #7fd8e7, #0C03BA);
-}
-
 .contactctn {
   width: 100%;
 }
