@@ -9,7 +9,7 @@ import TechStack from "../sections/Techstack";
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState('hero');
-  const clickRef = useRef(true);
+  const clickRef = useRef(false);
 
   const sections = [
     { id: 'hero', link: 'hero' },
