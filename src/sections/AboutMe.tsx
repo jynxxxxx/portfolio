@@ -28,12 +28,11 @@ export default function AboutMe({ id }: { id: string }) {
                     I thrive in ambiguous situations where the path isn't clear. Give me a complex bug, a new framework to learn, or a seemingly impossible feature request, and I'll dive in headfirst. My approach combines analytical thinking with creative experimentation.
                   </p>
                   <p>
-                    When I'm not coding, you'll find me exploring new technologies, contributing to open source, or mentoring other aspiring developers. I believe the best way to learn is by building—and breaking—things.
+                    When I'm not coding, you'll find me exploring new technologies, climbing, gaming, or eating.
                   </p>
                 </div>
               </div>
 
-              {/* Philosophy Cards */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4 hover-lift">
                   <Lightbulb className="w-8 h-8 text-bright3 mb-3" />
@@ -84,7 +83,7 @@ export default function AboutMe({ id }: { id: string }) {
                     <div>
                       <h4 className="font-medium">Discovery</h4>
                       <p className="text-sm text-white/60">
-                        First lines of code, fell in love with the logic and creativity of programming
+                        From "Hello World", fell in love with the problem solving and creativity of programming
                       </p>
                     </div>
                   </div>
@@ -100,7 +99,7 @@ export default function AboutMe({ id }: { id: string }) {
                 <ul className="space-y-3 text-white/60">
                   <li className="flex items-center gap-3">
                     <span className="text-bright3">→</span>
-                    Debugged my first major bug at 2 AM (and loved every minute)
+                    Experience in sales, operations, planning, and development
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-bright3">→</span>
@@ -108,11 +107,11 @@ export default function AboutMe({ id }: { id: string }) {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-bright3">→</span>
-                    Always excited about the next framework to learn
+                    Always excited to learn, be it coding or anything else
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-bright3">→</span>
-                    Believe that good code tells a story
+                    Love to travel (27 countries so far!)
                   </li>
                 </ul>
               </div>

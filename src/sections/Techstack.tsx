@@ -30,19 +30,12 @@ const techCategories = [
     ]
   },
   {
-    title: "Development Practices",
+    title: "Development",
     icon: Globe,
     skills: [
       "RESTful API design", "Third-party API integration", "Rapid prototyping", "Debugging", "Test automation"
     ]
   },
-  {
-    title: "Languages",
-    icon: MessageSquare,
-    skills: [
-      "English (Native Fluency)", "Korean (Conversational Speaking, Business Reading/Writing)"
-    ]
-  }
 ];
 
 export default function TechStack({ id }: { id: string }) {
@@ -65,7 +58,7 @@ export default function TechStack({ id }: { id: string }) {
         </div>
 
         {/* Tech Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {techCategories.map((category, categoryIndex) => (
             <div
               key={category.title}

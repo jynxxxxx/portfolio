@@ -24,7 +24,7 @@ export default function Hero({ id }: { id: string }) {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div className="rounded-full px-6 py-3 mb-8 animate-fade-in">
             <p className="text-bright3 font-mono text-sm">
-              💻 Turning bugs into features (and coffee into code)
+              💻 Turning ideas into products, FAST
             </p>
           </div>
 
