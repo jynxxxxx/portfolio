@@ -38,15 +38,24 @@ export default function Hero({ id }: { id: string }) {
 
           {/*buttons */}
           <div className="flex gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <button 
+            <a 
               className="group flex items-center justify-center bg-gradient-primary font-semibold px-5 py-3 rounded-full shadow-lg w-full sm:w-auto"
+              href="https://github.com/jynxxxxx"
+              target="_blank" 
+              rel="noopener noreferrer" 
             >
               <GithubIcon className="w-6 h-6 mr-2 group-hover:rotate-12" />
               <span className='group-hover:scale-[1.02] group-hover:text-gray-100'>View My Work</span>
               <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-[1.02]" />
-            </button>
+            </a>
             <button 
               className="group flex items-center justify-center border border-bright3/30 hover:border-bright3 hover:bg-bright3 hover:text-dark transition-colors font-semibold px-5 py-3 rounded-full shadow-lg"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               <Mail className="w-5 h-5 mr-2 transition-transform group-hover:scale-110 group-hover:text-dark" />
               <span>Get In Touch</span>

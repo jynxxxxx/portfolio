@@ -110,7 +110,7 @@ export default function TechStack({ id }: { id: string }) {
               Currently Learning & Exploring
             </h3>
             <div className="flex flex-wrap gap-3 justify-center">
-              {["GraphQL", "Rust", "Machine Learning", "Web3", "Microservices", "DevOps"].map((tech) => (
+              {["RAG", "LangChain", "AI Agents", "System Design", "GitHub Actions"].map((tech) => (
                 <span
                   key={tech}
                   className="px-4 py-2 bg-gradient-blue/10 text-bright3 border border-bright3/30 rounded-full text-sm font-medium hover:bg-gradient-blue/20 transition-colors"

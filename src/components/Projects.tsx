@@ -69,15 +69,25 @@ export function ProjectDetailsList() {
           <div className="mb-4">
             <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
             {project.hasDemo ? (
-              <div className="flex items-center gap-1 text-xs text-bright3">
+              <a 
+                className="flex items-center gap-1 text-xs text-bright3"
+                href={project.liveLink}
+                target="_blank" 
+              rel="noopener noreferrer" 
+              >
                 <ExternalLink className="w-3 h-3" />
                 Live Demo
-              </div>
+              </a>
             ) : (
-              <div className="flex items-center gap-1 text-xs text-white/40">
+              <a 
+                className="flex items-center gap-1 text-xs text-white/40"
+                href={project.gitLink}
+                target="_blank" 
+                rel="noopener noreferrer" 
+              >
                 <Code2 className="w-3 h-3" />
                 Code Only
-              </div>
+              </a>
             )}
           </div>
 

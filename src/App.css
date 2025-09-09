@@ -63,6 +63,14 @@
   background: linear-gradient(135deg, var(--color-bright1), var(--color-bright2));
 }
 
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-bright2), var(--color-bright3));
+}
+
+.bg-gradient-tertiary {
+  background: linear-gradient(135deg, var(--color-bright3), var(--color-bright1));
+}
+
 .bg-gradient-blue {
   background: linear-gradient(135deg, var(--color-bright3), white);
 }
