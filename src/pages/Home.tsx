@@ -3,40 +3,43 @@ import Projects from "../sections/Projects";
 import { Contact } from "../sections/Contact";
 import '../App.css'
 import NavBar from "../components/NavBar";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Hero from "../sections/Hero";
 import TechStack from "../sections/Techstack";
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState('hero');
+  const clickRef = useRef(true);
 
-  const handleNavLinkClick = (link: string) => {
+  const sections = [
+    { id: 'hero', link: 'hero' },
+    { id: 'projects', link: 'projects' },
+    { id: 'about', link: 'about' },
+    { id: 'techstack', link: 'techstack' },
+    { id: 'contact', link: 'contact' },
+  ];
+
+  const handleNavLinkClick = (e:any, link: string) => {
+    e.preventDefault();          
+    clickRef.current = true;
     setActiveLink(link);
+
+    const el = document.getElementById(link);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll manually
+    }
+
+    setTimeout(() => clickRef.current=false, 700);
   };
 
   const getActiveLinkFromScroll = () => {
-
-    const getElementOffsetTop = (id: string): number => {
-      const element = document.getElementById(id);
-      return element ? element.offsetTop : 0;
-    };
-
-    const sectionOffsets = {
-      hero: getElementOffsetTop('hero') - 100,
-      about: getElementOffsetTop('about') - 100,
-      projects: getElementOffsetTop('projects') - 100,
-      techstack: getElementOffsetTop('techstack') - 100,
-      contact: getElementOffsetTop('contact') - 100,
-    };
-
-    const scrollPosition = window.scrollY;
-
+    const scrollPosition = window.scrollY + 120; // 120 = threshold / navbar height
     let activeLink = 'hero';
 
-    // Find the closest section based on scroll position
-    for (const [link, offset] of Object.entries(sectionOffsets)) {
-      if (scrollPosition >= offset) {
-        activeLink = link;
+    for (const section of sections) {
+      const el = document.getElementById(section.id);
+      if (el && scrollPosition >= el.offsetTop) {
+        activeLink = section.link;
       } else {
         break;
       }
@@ -45,12 +48,9 @@ export default function Home() {
     return activeLink;
   };
 
-  // Event listener for scrolling
-  window.addEventListener('scroll', () => {
-    getActiveLinkFromScroll();
-  });
-
   const handleScroll = () => {
+    if (clickRef.current) return;
+
     const scrollActiveLink = getActiveLinkFromScroll();
     setActiveLink(scrollActiveLink);
   };
