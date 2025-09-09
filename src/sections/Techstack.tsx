@@ -3,7 +3,6 @@ import {
   Cloud, 
   Globe, 
   Wrench,
-  MessageSquare
 } from "lucide-react";
 import IconCarousel from "../components/IconCarousel";
 
