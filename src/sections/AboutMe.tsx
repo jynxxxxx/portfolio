@@ -4,8 +4,8 @@ import '../style/aboutme.css'
 export default function AboutMe({ id }: { id: string }) {
 
   return (
-    <section id={id} className='py-16 bg-dark'>
-      <div className="">
+    <section id={id} className='py-16 bg-dark px-6 '>
+      <div className="max-w-3xl lg:max-w-full mx-auto">
         <div className="mx-auto max-w-6xl">
           {/* Background Elements */}
           <div className="absolute inset-0 pointer-events-none">
@@ -17,7 +17,7 @@ export default function AboutMe({ id }: { id: string }) {
             {/* Left Column - Text Content */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">
                   About <span className="text-gradient-primary">Me</span>
                 </h2>
                 <div className="space-y-6 text-lg text-white/80 leading-relaxed">

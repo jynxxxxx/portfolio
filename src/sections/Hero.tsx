@@ -15,14 +15,14 @@ export default function Hero({ id }: { id: string }) {
       
       {/*animated shapes*/}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-primary rounded-full opacity-20 animate-float" />
-        <div className="absolute bottom-40 right-32 w-24 h-24 bg-gradient-blue rounded-full opacity-30 animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-80 left-5 sm:top-20 sm:left-20 w-32 h-32 bg-gradient-primary rounded-full opacity-20 animate-float" />
+        <div className="absolute bottom-20 right-13 sm:bottom-40 sm:right-32 w-24 h-24 bg-gradient-blue rounded-full opacity-30 animate-float" style={{ animationDelay: '1s' }} />
         <div className="absolute top-10 right-1/4 w-16 h-16 bg-bright1/30 rounded-lg rotate-45 animate-float" style={{ animationDelay: '2s' }} />
       </div>
       
       <div className="z-10 w-fit px-6 ">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="rounded-full px-6 py-3 mb-8 animate-fade-in">
+          <div className="rounded-full sm:px-6 py-3 mb-8 animate-fade-in">
             <p className="text-bright3 font-mono text-sm">
               💻 Turning ideas into products, FAST
             </p>
@@ -37,7 +37,7 @@ export default function Hero({ id }: { id: string }) {
           </p>
 
           {/*buttons */}
-          <div className="flex gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <a 
               className="group flex items-center justify-center bg-gradient-primary font-semibold px-5 py-3 rounded-full shadow-lg w-full sm:w-auto"
               href="https://github.com/jynxxxxx"
@@ -49,7 +49,7 @@ export default function Hero({ id }: { id: string }) {
               <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-[1.02]" />
             </a>
             <button 
-              className="group flex items-center justify-center border border-bright3/30 hover:border-bright3 hover:bg-bright3 hover:text-dark transition-colors font-semibold px-5 py-3 rounded-full shadow-lg"
+              className="group flex items-center justify-center border border-bright3/30 hover:border-bright3 hover:bg-bright3 hover:text-dark transition-colors font-semibold px-5 py-3 rounded-full shadow-lg w-full sm:w-auto" 
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {

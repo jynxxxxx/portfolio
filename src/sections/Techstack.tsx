@@ -47,11 +47,11 @@ export default function TechStack({ id }: { id: string }) {
         </div>
 
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Tech <span className="text-gradient">Stack</span>
           </h2>
-          <p className="text-xl text-white/40  max-w-2xl mx-auto">
+          <p className="text-regular md:text-xl text-white/40  max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life, from concept to deployment.
           </p>
         </div>
@@ -97,15 +97,15 @@ export default function TechStack({ id }: { id: string }) {
 
         {/* Featured Tech Highlight */}
         <div className="mt-16 text-center">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-8 max-w-4xl mx-auto">
+            <h3 className="text-lg md:text-2xl font-semibold mb-4">
               Currently Learning & Exploring
             </h3>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
               {["RAG", "LangChain", "AI Agents", "System Design", "GitHub Actions"].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-gradient-blue/10 text-bright3 border border-bright3/30 rounded-full text-sm font-medium hover:bg-gradient-blue/20 transition-colors"
+                  className="px-4 py-2 bg-gradient-blue/10 text-bright3 border border-bright3/30 rounded-full text-xs sm:text-sm font-medium hover:bg-gradient-blue/20 transition-colors"
                 >
                   {tech}
                 </span>

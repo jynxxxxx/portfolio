@@ -11,7 +11,7 @@ export function Contact({ id }: { id: string }) {
   };
 
   return (
-    <section id={id} className='bg-dark py-16'>
+    <section id={id} className='bg-dark py-16 px-6'>
       <div className="container mx-auto max-w-4xl">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-1/4 w-24 h-24 bg-bright3/10 rounded-full animate-float" />
@@ -20,16 +20,16 @@ export function Contact({ id }: { id: string }) {
 
         <div className="text-center">
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Let's <span className="text-gradient">Connect</span>
             </h2>
-            <p className="text-xl text-white/40 max-w-2xl mx-auto">
+            <p className="text-regular md:text-xl text-white/40 max-w-2xl mx-auto">
               Ready to collaborate, chat about code, or just say hello? I'd love to hear from you.
             </p>
           </div>
 
 
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 shadow-elevated max-w-2xl mx-auto">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-8 md:p-12 shadow-elevated max-w-2xl mx-auto">
             <div className="mb-8">
               <div className="inline-block p-4 rounded-2xl mb-6 shadow-[0_0_15px_theme(colors.bright3)]">
                 <Mail className="w-8 h-8 text-bright3" />

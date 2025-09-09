@@ -17,12 +17,12 @@ export default function Projects({ id }: { id: string }) {
   });
 
   return (
-    <section id={id} className='bg-black py-12'>
-      <div className="text-center my-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id={id} className='bg-black py-12 px-2'>
+      <div className="text-center my-8 px-2">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">
           Featured <span className="text-gradient-primary">Projects</span>
         </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-regular md:text-xl text-muted-foreground max-w-2xl mx-auto">
           A collection of projects that showcase my growth as a developer, from learning new frameworks to solving real-world problems.
         </p>
       </div>

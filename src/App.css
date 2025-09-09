@@ -112,35 +112,6 @@
   display: none;
 }
 
-
-@keyframes entryExitAnimation {
-  entry 0% {
-    opacity: 0;
-    clip-path: inset(0% 50%);
-  }
-
-  entry 100% {
-    opacity: 1;
-    clip-path: inset(0% 0% 0% 0%);
-  }
-
-  exit 0% {
-    opacity: 1;
-    clip-path: inset(0% 0% 0% 0%);
-  }
-
-  exit 100% {
-    opacity: 0;
-    clip-path: inset(0% 50%);
-  }
-}
-
-.page {
-  animation: linear entryExitAnimation both;
-  animation-timeline: view();
-  animation-range: entry cover 30% exit cover 30%;
-}
-
 ul,
 li {
   list-style-type: none;
@@ -183,6 +154,10 @@ a:-webkit-any-link {
     --detailfontsize: 0.7rem;
     --titlespacing: .4rem;
   }
+  
+  .navlink {
+    padding: 8px 0.7rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -191,5 +166,9 @@ a:-webkit-any-link {
     --mainfontsize: 0.7rem;
     --detailfontsize: 0.5rem;
     --titlespacing: .2rem;
+  }
+
+  .navlink {
+    padding: 8px 0.3rem;
   }
 }
